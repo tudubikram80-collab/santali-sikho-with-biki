@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#174d3b">
+<meta name="description" content="Santali Sikho — a simple free learning hub for Santali language and school education.">
+<title>Santali Sikho | Learn Every Day</title>
+<style>
+:root{color-scheme:light;--green:#174d3b;--green2:#23684e;--mint:#e1f1e6;--cream:#f7f7ef;--gold:#f4b34e;--ink:#1d2b24;--muted:#68756d;--line:#e2e8e1;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans",sans-serif;line-height:1.5}
+a{color:inherit}.wrap{width:min(1050px,100% - 32px);margin:auto}
+header{background:var(--green);color:white;padding:18px 0 55px;border-radius:0 0 30px 30px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:850;letter-spacing:.3px;display:flex;align-items:center;gap:9px}.brandmark{display:grid;place-items:center;background:#ffffff20;width:38px;height:38px;border-radius:13px;font-size:22px}
+nav a{text-decoration:none;color:#e0eee6;font-size:14px;margin-left:15px}.hero{padding-top:42px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:25px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#c4e5d0;text-transform:uppercase}
+h1{font-size:clamp(32px,6vw,56px);line-height:1.04;letter-spacing:-1.3px;margin:13px 0 16px}.hero p{color:#d8e9df;max-width:530px;margin:0 0 24px}.actions{display:flex;flex-wrap:wrap;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:13px;padding:12px 17px;font-weight:800;cursor:pointer;font-size:14px}.btn-gold{background:var(--gold);color:#2b261c}.btn-glass{border:1px solid #ffffff55;color:#fff;background:#ffffff0b}.hero-art{background:#ffffff12;border:1px solid #ffffff20;border-radius:26px;padding:24px;text-align:center}.hero-art .big{font-size:74px}.hero-art strong{display:block;font-size:18px}.hero-art small{color:#d7e9df}
+main{padding:24px 0 50px}.searchbar{display:flex;gap:9px;margin-top:-44px;position:relative;background:white;padding:9px;border-radius:17px;box-shadow:0 12px 34px #163b2815}.searchbar input{flex:1;min-width:0;border:0;outline:0;padding:11px 12px;font-size:15px;background:transparent;color:var(--ink)}.searchbar button{background:var(--gold);border:0;border-radius:12px;padding:10px 15px;font-weight:800}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:32px 0 14px}.section-head h2{font-size:23px;line-height:1.2;margin:0}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.mini-link{color:var(--green2);font-size:13px;font-weight:800;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.card{background:var(--white);border:1px solid var(--line);border-radius:19px;padding:18px;text-align:left;color:inherit;cursor:pointer;transition:transform .15s,box-shadow .15s;min-width:0}.card:hover{transform:translateY(-2px);box-shadow:0 9px 24px #183b2710}.emoji{font-size:30px}.card h3{font-size:16px;margin:10px 0 4px}.card p{font-size:13px;color:var(--muted);margin:0}.tag{display:inline-block;margin-top:13px;padding:5px 8px;background:var(--mint);color:var(--green);border-radius:8px;font-size:11px;font-weight:800}
+.banner{display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--mint);border-radius:22px;padding:21px 23px;margin-top:18px}.banner h3{margin:4px 0;font-size:19px}.banner p{margin:0;color:#506a5a;font-size:13px}.banner .art{font-size:44px}
+.lesson-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lesson{display:flex;align-items:center;gap:13px;background:white;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:left;cursor:pointer;color:inherit;min-width:0}.lesson-icon{flex-shrink:0;width:44px;height:44px;display:grid;place-items:center;background:#edf5ee;border-radius:13px;font-size:23px}.lesson strong{display:block;font-size:14px}.lesson small{color:var(--muted);font-size:12px}.lesson .arrow{margin-left:auto;color:var(--muted);font-size:22px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{border:1px solid var(--line);background:#fff;border-radius:16px;padding:15px;text-align:center}.stat b{font-size:21px;color:var(--green)}.stat span{display:block;color:var(--muted);font-size:12px}
+footer{background:#123a2c;color:#d8e9df;padding:28px 0;font-size:13px}footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer p{margin:5px 0;color:#b8d0c1}
+.modal{display:none;position:fixed;inset:0;background:#0d241bd9;z-index:10;align-items:center;justify-content:center;padding:17px}.modal.show{display:flex}.dialog{background:#fff;border-radius:23px;padding:23px;width:min(460px,100%);max-height:90vh;overflow:auto;text-align:center}.dialog .big{font-size:48px}.dialog h2{margin:7px 0}.dialog p{color:#58665e}.answers{display:grid;gap:8px;margin:16px 0}.answers button{padding:12px;border:1px solid #d5e0d7;background:#f7faf7;border-radius:12px;font-weight:700;cursor:pointer}.feedback{font-weight:800;min-height:24px;color:var(--green2)}.close{margin-top:8px}
+.empty{display:none;color:var(--muted);padding:14px}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding-top:32px}.hero-art{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-list{grid-template-columns:1fr}nav .links a{margin-left:9px;font-size:12px}.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:390px){.wrap{width:calc(100% - 22px)}.card{padding:14px}.section-head h2{font-size:20px}.stats span{font-size:11px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <nav><div class="brand"><span class="brandmark">🌿</span> SANTALI SIKHO</div><div class="links"><a href="#language">Language</a><a href="#education">Education</a></div></nav>
+  <section class="hero">
+   <div><div class="eyebrow">Learn a little every day</div><h1>Johar! Learn Santali.<br>Grow your knowledge.</h1><p>A simple learning space for Santali words, everyday conversations, school subjects and quick quizzes — made to work on your phone.</p><div class="actions"><a class="btn btn-gold" href="#language">Start learning ↗</a><a class="btn btn-glass" href="#education">Explore education</a></div></div>
+   <div class="hero-art"><div class="big">📚🌱</div><strong>Small lessons. Big progress.</strong><small>Learn • Practise • Repeat</small></div>
+  </section>
+ </div>
+</header>
+<main><div class="wrap">
+ <div class="searchbar"><input id="search" type="search" placeholder="Search a lesson, topic or word…" aria-label="Search lessons"><button id="searchBtn">Search</button></div>
+ <section id="language">
+  <div class="section-head"><div><h2>🌿 Santali language</h2><p>Start with useful basics and build your vocabulary.</p></div><a class="mini-link" href="#languageLessons">View lessons ↓</a></div>
+  <div class="grid" id="languageCards">
+   <button class="card searchable" data-search="alphabet ol chiki letters script" data-title="Alphabets & Ol Chiki" data-emoji="🔤" data-desc="Learn the Santali writing system step by step." data-body="Starter section: introduce Ol Chiki letters, letter names, writing practice and examples. Add lessons checked by a fluent Santali speaker before publishing."><span class="emoji">🔤</span><h3>Alphabets</h3><p>Letters and writing practice</p><span class="tag">Beginner</span></button>
+   <button class="card searchable" data-search="numbers counting ginti" data-title="Numbers & counting" data-emoji="🔢" data-desc="Practise counting and number words." data-body="Starter section: add numbers, spelling, pronunciation and short practice questions. Verify each Santali form with a reliable local language source."><span class="emoji">🔢</span><h3>Numbers</h3><p>Counting and number words</p><span class="tag">Beginner</span></button>
+   <button class="card searchable" data-search="daily words vocabulary greetings johar" data-title="Daily words" data-emoji="💬" data-desc="Learn common words used every day." data-body="Johar is a commonly used greeting. Add more words with Santali spelling, Roman spelling, meaning and audio after checking the local variety."><span class="emoji">💬</span><h3>Daily words</h3><p>Vocabulary and meanings</p><span class="tag">Practice</span></button>
+   <button class="card searchable" data-search="conversation speaking family phrases" data-title="Everyday conversation" data-emoji="🗣️" data-desc="Practise short everyday conversations." data-body="Add greetings, family conversations, asking questions and short dialogues. Include audio recorded by a fluent speaker when available."><span class="emoji">🗣️</span><h3>Conversation</h3><p>Useful phrases and speaking</p><span class="tag">Speaking</span></button>
+  </div>
+ </section>
+ <div class="banner"><div><div class="eyebrow" style="color:#39765a">YOUR DAILY GOAL</div><h3>5 minutes a day is a great start ✨</h3><p>Learn at your own pace. Come back and practise again.</p></div><div class="art">🌱</div></div>
+ <section id="education">
+  <div class="section-head"><div><h2>🎓 Education corner</h2><p>Simple learning topics for school and everyday knowledge.</p></div></div>
+  <div class="grid" id="educationCards">
+   <button class="card searchable" data-search="english grammar vocabulary education" data-title="English basics" data-emoji="🔠" data-desc="Build English step by step." data-body="Planned lessons: alphabet, everyday vocabulary, parts of speech, sentence building and short reading practice."><span class="emoji">🔠</span><h3>English basics</h3><p>Words, grammar and sentences</p><span class="tag">Language</span></button>
+   <button class="card searchable" data-search="mathematics maths arithmetic numbers" data-title="Maths basics" data-emoji="➗" data-desc="Practise everyday maths." data-body="Planned lessons: addition, subtraction, multiplication, division, fractions and simple word problems."><span class="emoji">➗</span><h3>Maths basics</h3><p>Numbers and calculations</p><span class="tag">Practice</span></button>
+   <button class="card searchable" data-search="science general knowledge environment" data-title="Science & nature" data-emoji="🔬" data-desc="Explore how the world works." data-body="Planned lessons: plants, animals, human body basics, weather, environment and simple science facts."><span class="emoji">🔬</span><h3>Science & nature</h3><p>Explore the world around you</p><span class="tag">Explore</span></button>
+   <button class="card searchable" data-search="quiz test questions general knowledge" data-title="Quick quiz" data-emoji="🧠" data-desc="Test what you know." data-body="Take a short quiz to practise and review a topic." onclick="openQuiz()"><span class="emoji">🧠</span><h3>Quick quiz</h3><p>Learn through questions</p><span class="tag">Play & learn</span></button>
+  </div>
+ </section>
+ <section id="languageLessons">
+  <div class="section-head"><div><h2>🚀 Quick lessons</h2><p>Tap a lesson to see its learning plan.</p></div></div>
+  <div class="lesson-list">
+   <button class="lesson searchable" data-search="greetings hello johar" data-title="Greetings" data-emoji="👋" data-desc="A friendly way to begin." data-body="Johar! — a commonly used Santali greeting. Exact pronunciation and usage can vary, so confirm with a fluent speaker."><span class="lesson-icon">👋</span><span><strong>Greetings</strong><small>Start a conversation</small></span><span class="arrow">›</span></button>
+   <button class="lesson searchable" data-search="family home relatives" data-title="Family words" data-emoji="🏡" data-desc="Words about family and home." data-body="Build a family-word list with Santali spelling, Roman spelling, Hindi/English meaning and example sentences. Verify every translation before publishing."><span class="lesson-icon">🏡</span><span><strong>Family words</strong><small>Family and home vocabulary</small></span><span class="arrow">›</span></button>
+   <button class="lesson searchable" data-search="school study learning" data-title="Study skills" data-emoji="✏️" data-desc="Simple habits for better learning." data-body="Try short study sessions, take small notes, revise yesterday's lesson and practise with questions."><span class="lesson-icon">✏️</span><span><strong>Study skills</strong><small>Make a simple study routine</small></span><span class="arrow">›</span></button>
+   <button class="lesson searchable" data-search="general knowledge india geography" data-title="General knowledge" data-emoji="🌍" data-desc="Build knowledge one topic at a time." data-body="Planned topics: India, geography, nature, history and everyday facts. Check facts against trustworthy educational sources."><span class="lesson-icon">🌍</span><span><strong>General knowledge</strong><small>Explore and revise</small></span><span class="arrow">›</span></button>
+  </div>
+  <p class="empty" id="empty">No matching lesson found. Try another word.</p>
+ </section>
+ <div class="stats"><div class="stat"><b>📱</b><span>Phone friendly</span></div><div class="stat"><b>🌱</b><span>Beginner friendly</span></div><div class="stat"><b>💚</b><span>Free starter site</span></div></div>
+</div></main>
+<footer><div class="wrap foot"><div><strong>🌿 Santali Sikho</strong><p>Learning together, one lesson at a time.</p></div><div><strong>Content note</strong><p>Starter demo. Verify Santali translations and add full lessons before public launch.</p></div></div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div class="dialog"><div class="big" id="mEmoji">🌿</div><h2 id="mTitle">Lesson</h2><p id="mDesc"></p><p id="mBody"></p><div class="answers" id="answers"></div><div class="feedback" id="feedback"></div><button class="btn btn-gold close" id="closeBtn">Close</button></div></div>
+<script>
+const modal=document.getElementById('modal');
+function showLesson(title,emoji,desc,body){document.getElementById('mTitle').textContent=title;document.getElementById('mEmoji').textContent=emoji||'📚';document.getElementById('mDesc').textContent=desc||'';document.getElementById('mBody').textContent=body||'';document.getElementById('answers').innerHTML='';document.getElementById('feedback').textContent='';modal.classList.add('show')}
+document.querySelectorAll('[data-title]').forEach(el=>{if(!el.classList.contains('card')||!el.onclick){el.addEventListener('click',()=>showLesson(el.dataset.title,el.dataset.emoji,el.dataset.desc,el.dataset.body))}});
+function openQuiz(){document.getElementById('mTitle').textContent='Quick quiz';document.getElementById('mEmoji').textContent='🧠';document.getElementById('mDesc').textContent='“Johar” is commonly used as what?';document.getElementById('mBody').textContent='Choose the best answer:';document.getElementById('feedback').textContent='';const box=document.getElementById('answers');box.innerHTML='';[['A greeting / hello',true],['A number',false],['A school subject',false]].forEach(([label,correct])=>{const b=document.createElement('button');b.textContent=label;b.onclick=()=>document.getElementById('feedback').textContent=correct?'Correct! Well done 🎉':'Try again 🙂';box.appendChild(b)});modal.classList.add('show')}
+document.querySelectorAll('.card[onclick="openQuiz()"]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();openQuiz()}));
+function closeModal(){modal.classList.remove('show')}document.getElementById('closeBtn').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+function searchLessons(){const q=document.getElementById('search').value.trim().toLowerCase();let count=0;document.querySelectorAll('.searchable').forEach(el=>{const match=!q||((el.dataset.search||'')+' '+el.textContent).toLowerCase().includes(q);el.style.display=match?'':'none';if(match)count++});document.getElementById('empty').style.display=count?'none':'block'}
+document.getElementById('searchBtn').addEventListener('click',searchLessons);document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')searchLessons()});
+</script>
+</body>
+</html>
